@@ -1,17 +1,38 @@
-## My Project
+# APIGateway S3 integration sample
 
-TODO: Fill this README out!
+This sample shows how to integrate APIGateway with S3 bucket. 
 
-Be sure to:
+### Prerequisite
+* You should run the commands on the terminal with node.js and npm installed.
 
-* Change the title in this README
-* Edit your repository description on GitHub
+### How to deploy
 
-## Security
+1. install npm dependency
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+```
+$npm install 
+```
 
-## License
+2. build the Typescript
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+```
+$npm run build
+```
 
+3. deploy the environment. Please confirm the output shown on the terminal. This is the APIgateway endpoint.
+
+```
+$npm run deploy
+,,,,
+,,,
+,,
+S3APIGWStack.RestApiEndpoint2FBB443B = https://xxxxxxx.execute-api.ap-northeast-1.amazonaws.com/api/
+```
+
+4. access the API URL using your favorite web browser
+
+`
+https://xxxxxxx.execute-api.ap-northeast-1.amazonaws.com/api/static/index.html
+`
+
+You should be able to see the "Content" on the gray background.
